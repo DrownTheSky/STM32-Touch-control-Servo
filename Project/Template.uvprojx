@@ -408,14 +408,14 @@
               <FilePath>..\USER\beep\bsp_beep.c</FilePath>
             </File>
             <File>
+              <FileName>bsp_tim_general.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\USER\tim_general\bsp_tim_general.c</FilePath>
+            </File>
+            <File>
               <FileName>bsp_fmc_sdram.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\USER\fmc\bsp_fmc_sdram.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_font.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USER\font\bsp_font.c</FilePath>
             </File>
             <File>
               <FileName>bsp_lcd.c</FileName>
@@ -423,34 +423,19 @@
               <FilePath>..\USER\lcd\bsp_lcd.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_spi_flash.c</FileName>
+              <FileName>bsp_touch.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\USER\spi\bsp_spi_flash.c</FilePath>
+              <FilePath>..\USER\lcd\bsp_touch.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_tim_general.c</FileName>
+              <FileName>bsp_spi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\USER\tim_general\bsp_tim_general.c</FilePath>
+              <FilePath>..\USER\spi\bsp_spi.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_i2c_touch.c</FileName>
+              <FileName>bsp_usart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\USER\touch\bsp_i2c_touch.c</FilePath>
-            </File>
-            <File>
-              <FileName>gt9xx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USER\touch\gt9xx.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_debug_usart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USER\usart\bsp_debug_usart.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_systick.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USER\systick\bsp_systick.c</FilePath>
+              <FilePath>..\USER\usart\bsp_usart.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1313,14 +1298,14 @@
               <FilePath>..\USER\beep\bsp_beep.c</FilePath>
             </File>
             <File>
+              <FileName>bsp_tim_general.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\USER\tim_general\bsp_tim_general.c</FilePath>
+            </File>
+            <File>
               <FileName>bsp_fmc_sdram.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\USER\fmc\bsp_fmc_sdram.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_font.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USER\font\bsp_font.c</FilePath>
             </File>
             <File>
               <FileName>bsp_lcd.c</FileName>
@@ -1328,34 +1313,19 @@
               <FilePath>..\USER\lcd\bsp_lcd.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_spi_flash.c</FileName>
+              <FileName>bsp_touch.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\USER\spi\bsp_spi_flash.c</FilePath>
+              <FilePath>..\USER\lcd\bsp_touch.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_tim_general.c</FileName>
+              <FileName>bsp_spi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\USER\tim_general\bsp_tim_general.c</FilePath>
+              <FilePath>..\USER\spi\bsp_spi.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_i2c_touch.c</FileName>
+              <FileName>bsp_usart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\USER\touch\bsp_i2c_touch.c</FilePath>
-            </File>
-            <File>
-              <FileName>gt9xx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USER\touch\gt9xx.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_debug_usart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USER\usart\bsp_debug_usart.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_systick.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USER\systick\bsp_systick.c</FilePath>
+              <FilePath>..\USER\usart\bsp_usart.c</FilePath>
             </File>
           </Files>
         </Group>

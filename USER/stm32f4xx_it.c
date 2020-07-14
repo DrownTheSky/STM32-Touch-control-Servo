@@ -29,14 +29,8 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_it.h"
-#include "./systick/bsp_systick.h"
-#include "./touch/gt9xx.h"
-
-
-
-extern void GTP_TouchProcess(void);
-
-
+#include "./lcd/bsp_touch.h"
+#include "./usart/bsp_usart.h"
 /** @addtogroup Template_Project
   * @{
   */
@@ -147,16 +141,7 @@ void PendSV_Handler(void)
   */
 void SysTick_Handler(void)
 {
-	static uint8_t timecount = 0;
-	if(timecount >= 10)
-	{
-		timecount = 0;
-		GTP_TouchProcess();
-	}
-	TimingDelay_Decrement();
-	timecount++;
 }
-
 
 /******************************************************************************/
 /*                 STM32F4xx Peripherals Interrupt Handlers                   */
@@ -164,6 +149,28 @@ void SysTick_Handler(void)
 /*  available peripheral interrupt handler's name please refer to the startup */
 /*  file (startup_stm32f4xx.s).                                               */
 /******************************************************************************/
+
+char USART_RX_Temp = 0;
+void USART_IRQHANDLER(void)
+{
+  if (USART_GetFlagStatus(USART, USART_FLAG_RXNE) != RESET)
+  {
+    USART_ClearFlag(USART, USART_IT_RXNE);
+
+    USART_RX_Temp = USART_ReceiveData(USART);
+    USART_SendString(&USART_RX_Temp);
+  }
+}
+
+/* EXTI中断服务函数 */
+void GTP_IRQHandler(void)
+{
+  if (EXTI_GetITStatus(GTP_INT_EXTI_LINE) != RESET) //确保是否产生了EXTI Line中断
+  {
+    EXTI_ClearITPendingBit(GTP_INT_EXTI_LINE); //清除中断标志位
+    GT91x_Touch_Get();
+  }
+}
 
 /**
   * @brief  This function handles PPP interrupt request.
@@ -176,7 +183,6 @@ void SysTick_Handler(void)
 
 /**
   * @}
-  */ 
-
+  */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
